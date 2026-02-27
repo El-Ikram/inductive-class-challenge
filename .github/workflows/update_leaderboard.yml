@@ -1,13 +1,12 @@
 name: Update Leaderboard
 
-# Run this ONLY when code is merged into the 'main' branch
 on:
   push:
     branches:
       - main
     paths:
-      # FIXED: Now triggers when encrypted files are merged
       - 'submissions/**/*.enc'
+  workflow_dispatch:
 
 permissions:
   contents: write
